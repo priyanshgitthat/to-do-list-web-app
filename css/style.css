@@ -165,6 +165,8 @@ width:95%;
     .add-btn {
         font-size: 1.8rem; /* Smaller font size for smaller screens */
     }
+.task-list{
+width:95%;}
 
     .task-list li {
         font-size: 2rem; 
