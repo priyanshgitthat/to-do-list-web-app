@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%; /* Base font size for easier rem calculation */
+}
+
+body {
+    width: 100%;
+    max-width: 2000px;
+    min-height: 100dvh;
+    background: linear-gradient(45deg, #d31f64, #01003b);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5rem 0 2rem 0;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    height: max-content;
+    background-color: #ddd;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 1.2rem 0;
+}
+
+#title {
+    background-color: #ddddddaf;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4.8rem; /* Adjusted for responsiveness */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.8rem;
+}
+
+.input-tab {
+    background-color: #ddd;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #5f5f5f;
+}
+
+.input {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.add-btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2rem;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background: linear-gradient(-45deg, #d31f64, #01003b);
+    color: #ddd;
+    cursor: pointer;
+}
+
+.task-list {
+    width: 60%;
+    margin: 2rem auto;
+    list-style: none;
+}
+
+.task-list li {
+    font-size: 2.1rem; /* Adjusted for responsiveness */
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    gap: 1rem;
+    position: relative;
+}
+
+.task-list li span {
+    background-color: #868585;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 2.2rem; /* Adjusted for responsiveness */
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c41515;
+    cursor: pointer;
+}
+
+.task-list li::before {
+    content: "";
+    font-size: 1.8rem; /* Adjusted for responsiveness */
+    font-weight: 900;
+    border: 2px solid #222;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-list li.checked {
+    color: #2222223b;
+}
+
+.task-list li.checked::before {
+    content: '\2714';
+    color: red;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        justify-content: unset;
+        align-items: unset;
+        padding: unset;
+    }
+
+    main {
+        width: 100%;
+        min-height: 100dvh;
+        border-radius: unset;
+        background-color: #ddddddee;
+        backdrop-filter: blur(5px);
+        padding: unset;
+    }
+
+    #title {
+        font-size: 3.6rem; 
+        margin: unset;/* Smaller font size for smaller screens */
+    }
+
+    .input {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+    }
+
+
+
+    .add-btn {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+    }
+
+    .task-list li {
+        font-size: 2rem; 
+        color: #080808;/* Smaller font size for smaller screens */
+    }
+    .task-list li.checked {
+        color: #22222259;
+    }
+
+    .task-list li span {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #title {
+        font-size: 2.8rem; /* Adjust further for very small screens */
+    }
+
+
+    .task-list li span {
+        font-size: 1.8rem;
+    }
+}
