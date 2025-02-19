@@ -9,6 +9,11 @@
 
 <body>
 <main>
+    <div class="bg-back">
+        <video id="background-video" muted autoplay loop>
+            <source src="./5717426-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+    </div>
     <h1 id="title">
         to do list
     </h1>
@@ -28,4 +33,23 @@
 </main>
 </body>
 <script src="./js/script.js"></script>
+
+
+<script>
+    function updateVideoSource() {
+        const video = document.getElementById("background-video");
+        const source = video.querySelector("source");
+
+        if (window.innerWidth <= 600) {
+            source.src = "./mobile.mp4"; // Change this to your mobile version video
+        } else {
+            source.src = "./5717426-hd_1920_1080_25fps.mp4";
+        }
+
+        video.load(); // Reload video with new source
+    }
+
+    window.addEventListener("resize", updateVideoSource);
+    updateVideoSource(); // Run initially
+</script>
 </html>
