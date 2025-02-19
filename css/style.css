@@ -184,12 +184,17 @@ main {
         background-color: #07070741;
 
     }
+.input-tab{
+width:95%;
+}
 
 
 
     .add-btn {
         font-size: 1.8rem; /* Smaller font size for smaller screens */
     }
+.task-list{
+width:95%;}
 
     video{
         object-position:center;
